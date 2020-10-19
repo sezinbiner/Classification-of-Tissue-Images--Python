@@ -112,7 +112,7 @@ model = build_model(inception ,lr = 1e-4)
 model.summary()
 
 learn_control = ReduceLROnPlateau(monitor='val_acc', patience=5, verbose=1,factor=0.2, min_lr=1e-7)
-model_checkpoint = ModelCheckpoint('/content/gdrive/My Drive/git_hub_models/densenet201.h5', monitor='val_loss', mode='min', verbose=1, save_best_only=True)
+model_checkpoint = ModelCheckpoint('/content/gdrive/My Drive/git_hub_models/ınceptıonv3.h5', monitor='val_loss', mode='min', verbose=1, save_best_only=True)
 
 history = model.fit_generator(
     train_generator.flow(x_train, y_train_one_hot, batch_size=BATCH_SIZE),
